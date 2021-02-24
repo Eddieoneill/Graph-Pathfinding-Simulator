@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6CBFB85C25E6AD2E00639161 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFB85B25E6AD2E00639161 /* AppDelegate.swift */; };
+		6CBFB85E25E6AD2E00639161 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFB85D25E6AD2E00639161 /* SceneDelegate.swift */; };
+		6CBFB86025E6AD2E00639161 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFB85F25E6AD2E00639161 /* ViewController.swift */; };
+		6CBFB86325E6AD2E00639161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CBFB86125E6AD2E00639161 /* Main.storyboard */; };
+		6CBFB86525E6AD2F00639161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CBFB86425E6AD2F00639161 /* Assets.xcassets */; };
+		6CBFB86825E6AD2F00639161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CBFB86625E6AD2F00639161 /* LaunchScreen.storyboard */; };
+		6CBFB87625E6B04900639161 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFB87525E6B04900639161 /* CustomCell.swift */; };
+		6CBFB87925E6C82F00639161 /* CellState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFB87825E6C82F00639161 /* CellState.swift */; };
+		6CBFB87C25E6D32700639161 /* GraphSearchOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFB87B25E6D32700639161 /* GraphSearchOptions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6CBFB85825E6AD2E00639161 /* Graph-Path-Finding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Graph-Path-Finding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CBFB85B25E6AD2E00639161 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6CBFB85D25E6AD2E00639161 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6CBFB85F25E6AD2E00639161 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6CBFB86225E6AD2E00639161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6CBFB86425E6AD2F00639161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CBFB86725E6AD2F00639161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6CBFB86925E6AD2F00639161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CBFB87525E6B04900639161 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		6CBFB87825E6C82F00639161 /* CellState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellState.swift; sourceTree = "<group>"; };
+		6CBFB87B25E6D32700639161 /* GraphSearchOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphSearchOptions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CBFB85525E6AD2E00639161 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6CBFB84F25E6AD2E00639161 = {
+			isa = PBXGroup;
+			children = (
+				6CBFB85A25E6AD2E00639161 /* Graph-Path-Finding */,
+				6CBFB85925E6AD2E00639161 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6CBFB85925E6AD2E00639161 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CBFB85825E6AD2E00639161 /* Graph-Path-Finding.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6CBFB85A25E6AD2E00639161 /* Graph-Path-Finding */ = {
+			isa = PBXGroup;
+			children = (
+				6CBFB85B25E6AD2E00639161 /* AppDelegate.swift */,
+				6CBFB85D25E6AD2E00639161 /* SceneDelegate.swift */,
+				6CBFB85F25E6AD2E00639161 /* ViewController.swift */,
+				6CBFB87525E6B04900639161 /* CustomCell.swift */,
+				6CBFB87825E6C82F00639161 /* CellState.swift */,
+				6CBFB87B25E6D32700639161 /* GraphSearchOptions.swift */,
+				6CBFB86125E6AD2E00639161 /* Main.storyboard */,
+				6CBFB86425E6AD2F00639161 /* Assets.xcassets */,
+				6CBFB86625E6AD2F00639161 /* LaunchScreen.storyboard */,
+				6CBFB86925E6AD2F00639161 /* Info.plist */,
+			);
+			path = "Graph-Path-Finding";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6CBFB85725E6AD2E00639161 /* Graph-Path-Finding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CBFB86C25E6AD2F00639161 /* Build configuration list for PBXNativeTarget "Graph-Path-Finding" */;
+			buildPhases = (
+				6CBFB85425E6AD2E00639161 /* Sources */,
+				6CBFB85525E6AD2E00639161 /* Frameworks */,
+				6CBFB85625E6AD2E00639161 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Graph-Path-Finding";
+			productName = "Graph-Path-Finding";
+			productReference = 6CBFB85825E6AD2E00639161 /* Graph-Path-Finding.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6CBFB85025E6AD2E00639161 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					6CBFB85725E6AD2E00639161 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 6CBFB85325E6AD2E00639161 /* Build configuration list for PBXProject "Graph-Path-Finding" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6CBFB84F25E6AD2E00639161;
+			productRefGroup = 6CBFB85925E6AD2E00639161 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6CBFB85725E6AD2E00639161 /* Graph-Path-Finding */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6CBFB85625E6AD2E00639161 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CBFB86825E6AD2F00639161 /* LaunchScreen.storyboard in Resources */,
+				6CBFB86525E6AD2F00639161 /* Assets.xcassets in Resources */,
+				6CBFB86325E6AD2E00639161 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6CBFB85425E6AD2E00639161 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CBFB86025E6AD2E00639161 /* ViewController.swift in Sources */,
+				6CBFB87C25E6D32700639161 /* GraphSearchOptions.swift in Sources */,
+				6CBFB87925E6C82F00639161 /* CellState.swift in Sources */,
+				6CBFB85C25E6AD2E00639161 /* AppDelegate.swift in Sources */,
+				6CBFB87625E6B04900639161 /* CustomCell.swift in Sources */,
+				6CBFB85E25E6AD2E00639161 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6CBFB86125E6AD2E00639161 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CBFB86225E6AD2E00639161 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6CBFB86625E6AD2F00639161 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CBFB86725E6AD2F00639161 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6CBFB86A25E6AD2F00639161 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6CBFB86B25E6AD2F00639161 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6CBFB86D25E6AD2F00639161 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AKWB6WDMH;
+				INFOPLIST_FILE = "Graph-Path-Finding/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.edward.Graph-Path-Finding";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6CBFB86E25E6AD2F00639161 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AKWB6WDMH;
+				INFOPLIST_FILE = "Graph-Path-Finding/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.edward.Graph-Path-Finding";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CBFB85325E6AD2E00639161 /* Build configuration list for PBXProject "Graph-Path-Finding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CBFB86A25E6AD2F00639161 /* Debug */,
+				6CBFB86B25E6AD2F00639161 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CBFB86C25E6AD2F00639161 /* Build configuration list for PBXNativeTarget "Graph-Path-Finding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CBFB86D25E6AD2F00639161 /* Debug */,
+				6CBFB86E25E6AD2F00639161 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6CBFB85025E6AD2E00639161 /* Project object */;
+}
