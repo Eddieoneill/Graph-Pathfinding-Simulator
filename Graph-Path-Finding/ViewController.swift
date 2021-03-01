@@ -60,12 +60,27 @@ class ViewController: UIViewController {
         return button
     }()
     
+    let greedyButton: UIButton = {
+        let screenSize = UIScreen.main.bounds
+        let frame = CGRect(x: screenSize.width/2 - 200, y: 600, width: 200, height: 50)
+        let button = UIButton(type: .system)
+        button.frame = frame
+        button.setTitle("Greedy Search", for: .normal)
+        button.addTarget(self, action: #selector(greedyButtonPressed), for: .touchUpInside)
+
+        return button
+    }()
+    
     @objc func dfsButtonPressed(sender : UIButton) {
         graphSearchOptions.state = .dfs
     }
     
     @objc func bfsButtonPressed(sender : UIButton) {
         graphSearchOptions.state = .bfs
+    }
+    
+    @objc func greedyButtonPressed(sender : UIButton) {
+        graphSearchOptions.state = .greedy
     }
     
     @objc func stateButtonPressed(sender : UIButton) {
@@ -110,6 +125,7 @@ class ViewController: UIViewController {
         self.view.addSubview(startButton)
         self.view.addSubview(bfsButton)
         self.view.addSubview(dfsButton)
+        self.view.addSubview(greedyButton)
         view.addSubview(collectionView)
         view.backgroundColor = .black
         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
