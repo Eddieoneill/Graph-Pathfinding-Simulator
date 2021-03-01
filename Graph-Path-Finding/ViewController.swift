@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         return cv
     }()
     
-    let button: UIButton = {
+    let startButton: UIButton = {
         let screenSize = UIScreen.main.bounds
         let frame = CGRect(x: screenSize.width/2 - 100, y: 500, width: 200, height: 50)
         let button = UIButton(type: .system)
@@ -38,13 +38,43 @@ class ViewController: UIViewController {
         return button
     }()
     
+    let dfsButton: UIButton = {
+        let screenSize = UIScreen.main.bounds
+        let frame = CGRect(x: screenSize.width/2, y: 550, width: 200, height: 50)
+        let button = UIButton(type: .system)
+        button.frame = frame
+        button.setTitle("DFS Search", for: .normal)
+        button.addTarget(self, action: #selector(dfsButtonPressed), for: .touchUpInside)
+
+        return button
+    }()
+    
+    let bfsButton: UIButton = {
+        let screenSize = UIScreen.main.bounds
+        let frame = CGRect(x: screenSize.width/2 - 200, y: 550, width: 200, height: 50)
+        let button = UIButton(type: .system)
+        button.frame = frame
+        button.setTitle("BFS Search", for: .normal)
+        button.addTarget(self, action: #selector(bfsButtonPressed), for: .touchUpInside)
+
+        return button
+    }()
+    
+    @objc func dfsButtonPressed(sender : UIButton) {
+        graphSearchOptions.state = .dfs
+    }
+    
+    @objc func bfsButtonPressed(sender : UIButton) {
+        graphSearchOptions.state = .bfs
+    }
+    
     @objc func stateButtonPressed(sender : UIButton) {
-        if button.titleLabel?.text == "Generate Board" {
-            button.setTitle("Start", for: .normal)
+        if startButton.titleLabel?.text == "Generate Board" {
+            startButton.setTitle("Start", for: .normal)
             searchSpeed = Timer.scheduledTimer(timeInterval: 0.00001, target: self, selector: #selector(createBoard), userInfo: nil, repeats: true)
-            button.isEnabled = false
-        } else if button.titleLabel?.text == "Start" {
-            button.setTitle("Reset", for: .normal)
+            startButton.isEnabled = false
+        } else if startButton.titleLabel?.text == "Start" {
+            startButton.setTitle("Reset", for: .normal)
             startSearch()
         } else {
             for cell in cellCollection {
@@ -54,7 +84,7 @@ class ViewController: UIViewController {
             cells = []
             selectedCells = 0
             cellCount = 0
-            button.setTitle("Generate Board", for: .normal)
+            startButton.setTitle("Generate Board", for: .normal)
             searchSpeed?.invalidate()
         }
         
@@ -77,7 +107,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(button)
+        self.view.addSubview(startButton)
+        self.view.addSubview(bfsButton)
+        self.view.addSubview(dfsButton)
         view.addSubview(collectionView)
         view.backgroundColor = .black
         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
@@ -118,7 +150,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         } else if selectedCells == 1 {
             cellCollection[indexPath.row].backgroundColor = .red
             selectedCells += 1
-            button.isEnabled = true
+            startButton.isEnabled = true
         } else {
             cellCollection[indexPath.row].backgroundColor = .gray
         }
