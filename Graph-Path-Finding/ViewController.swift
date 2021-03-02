@@ -71,6 +71,17 @@ class ViewController: UIViewController {
         return button
     }()
     
+    let bidirectionalButton: UIButton = {
+        let screenSize = UIScreen.main.bounds
+        let frame = CGRect(x: screenSize.width/2, y: 600, width: 200, height: 50)
+        let button = UIButton(type: .system)
+        button.frame = frame
+        button.setTitle("Bidirectional Search", for: .normal)
+        button.addTarget(self, action: #selector(bidirectionalButtonPressed), for: .touchUpInside)
+
+        return button
+    }()
+    
     @objc func dfsButtonPressed(sender : UIButton) {
         graphSearchOptions.state = .dfs
     }
@@ -81,6 +92,10 @@ class ViewController: UIViewController {
     
     @objc func greedyButtonPressed(sender : UIButton) {
         graphSearchOptions.state = .greedy
+    }
+    
+    @objc func bidirectionalButtonPressed(sender : UIButton) {
+        graphSearchOptions.state = .bidirectional
     }
     
     @objc func stateButtonPressed(sender : UIButton) {
@@ -126,6 +141,7 @@ class ViewController: UIViewController {
         self.view.addSubview(bfsButton)
         self.view.addSubview(dfsButton)
         self.view.addSubview(greedyButton)
+        self.view.addSubview(bidirectionalButton)
         view.addSubview(collectionView)
         view.backgroundColor = .black
         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
