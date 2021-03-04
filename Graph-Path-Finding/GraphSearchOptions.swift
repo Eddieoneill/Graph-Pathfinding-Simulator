@@ -35,7 +35,7 @@ class GraphSearchOptions {
             } else if cell.backgroundColor == .red {
                 target = [matrix.count, row.count]
                 targetQueue.append([matrix.count, row.count])
-                if state == .bidirectional { seen.insert("\(matrix.count)-\(row.count)") }
+                if state == .bidirectional { seen2.insert("\(matrix.count)-\(row.count)") }
             }
             
             row.append(cell)
@@ -212,7 +212,7 @@ class GraphSearchOptions {
         matrix[currRow1][currCol1].backgroundColor = .green
         matrix[currRow2][currCol2].backgroundColor = .yellow
         
-        if seen2.isEmpty {
+        if seen2.count <= 1 {
             matrix[currRow1][currCol1].backgroundColor = .blue
             matrix[currRow2][currCol2].backgroundColor = .red
         }
