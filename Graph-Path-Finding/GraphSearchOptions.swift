@@ -12,10 +12,11 @@ enum GraphState {
     case bfs
     case greedy
     case bidirectional
+    case dijkstra
 }
 
 class GraphSearchOptions {
-    var state: GraphState = .dfs
+    var state: GraphState = .bfs
     var matrix: [[CustomCell]] = []
     var target: [Int] = []
     var queue: [[Int]] = []
@@ -23,6 +24,7 @@ class GraphSearchOptions {
     var seen: Set<String> = []
     var seen2: Set<String> = []
     var searchSpeed: Timer?
+    var start: [Int] = []
     
     func generateMatrix(_ arr: [CustomCell]) {
         var matrix: [[CustomCell]] = []
@@ -30,12 +32,17 @@ class GraphSearchOptions {
         
         for cell in arr {
             if cell.backgroundColor == .green {
+                cell.tag = 1
+                start = [matrix.count, row.count]
                 queue.append([matrix.count, row.count])
                 seen.insert("\(matrix.count)-\(row.count)")
             } else if cell.backgroundColor == .red {
                 target = [matrix.count, row.count]
                 targetQueue.append([matrix.count, row.count])
+                cell.tag = 2
                 if state == .bidirectional { seen2.insert("\(matrix.count)-\(row.count)") }
+            } else if cell.backgroundColor == .gray {
+                cell.tag = -1
             }
             
             row.append(cell)
@@ -56,6 +63,8 @@ class GraphSearchOptions {
             searchSpeed = Timer.scheduledTimer(timeInterval: 0.005, target: self, selector: #selector(bfs), userInfo: nil, repeats: true)
         } else if state == .bidirectional {
             searchSpeed = Timer.scheduledTimer(timeInterval: 0.005, target: self, selector: #selector(bidirectional), userInfo: nil, repeats: true)
+        } else if state == .dijkstra {
+            searchSpeed = Timer.scheduledTimer(timeInterval: 0.005, target: self, selector: #selector(dijkstra), userInfo: nil, repeats: true)
         } else {
             searchSpeed = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(dfs), userInfo: nil, repeats: true)
         }
@@ -246,6 +255,123 @@ class GraphSearchOptions {
             
             seen2.insert("\(newRow)-\(newCol)")
             targetQueue.append([newRow, newCol])
+        }
+    }
+    
+    @objc func dijkstra() {
+        var mtx: [[Node]] = []
+        let curr = queue.removeFirst()
+        let currRow = curr[0]
+        let currCol = curr[1]
+        let dirs = [[0, 1], [0, -1], [1, 0], [-1, 0]]
+        
+        func calculateWeight(_ target: [Int], _ start: [Int]) -> [[Node]] {
+            
+            for row in 0..<matrix.count {
+                var nodes: [Node] = []
+                for col in 0..<matrix[row].count {
+                    let node = Node(matrix[row][col].tag, row, col)
+                    nodes.append(node)
+                }
+                mtx.append(nodes)
+            }
+            
+            let targetRow = target[0]
+            let targetCol = target[1]
+            let startRow = start[0]
+            let startCol = start[1]
+            let result = mtx
+            var queue = [mtx[start[0]][start[1]]]
+            result[targetRow][targetCol].weight = Int.max
+            result[startRow][startCol].weight = 0
+            
+            while !queue.isEmpty {
+                let size = queue.count
+                
+                for _ in 0..<size {
+                    let curr = queue.removeFirst()
+                    
+                    for dir in dirs {
+                        let newRow = curr.row + dir[0]
+                        let newCol = curr.col + dir[1]
+                        
+                        if newRow < 0 || newRow >= result.count ||
+                            newCol < 0 || newCol >= result[0].count ||
+                            result[newRow][newCol].val == -1 ||
+                            seen.contains("\(newRow)-\(newCol)") {
+                            continue
+                        }
+                        
+                        let currWeight = [max(newRow, targetRow) - min(newRow, targetRow),
+                                      max(newCol, targetCol) - min(newCol, targetCol)]
+                        let preWeight = [max(curr.row, targetRow) - min(curr.row, targetRow),
+                                         max(curr.col, targetCol) - min(curr.col, targetCol)]
+                        
+                        if currWeight[0] < preWeight[0] || currWeight[1] < preWeight[1] {
+                            result[newRow][newCol].weight = result[curr.row][curr.col].weight + 1
+                        } else {
+                            result[newRow][newCol].weight = result[curr.row][curr.col].weight + 2
+                        }
+                        seen.insert("\(newRow)-\(newCol)")
+                        result[curr.row][curr.col].neighbors.append(result[newRow][newCol])
+                        queue.append(result[newRow][newCol])
+                    }
+                }
+            }
+            
+            return result
+        }
+        
+        func dfs(_ path: inout [Node], _ curr: Node) -> [Node] {
+            if curr.row == target[0] && curr.col == target[1] { return path }
+            var result: [Node] = Array(repeating: Node(0, 0, 0), count: 500)
+            
+            for node in curr.neighbors where !seen.contains("\(node.row)-\(node.col)") {
+                path.append(node)
+                seen.insert("\(node.row)-\(node.col)")
+                let temp = dfs(&path, node)
+                if temp.count < result.count { result = temp }
+                path.removeLast()
+            }
+            
+            return result
+        }
+        
+        if matrix[currRow][currCol].backgroundColor == .red {
+            var path: [Node] = []
+            seen = []
+            let result = calculateWeight(target, start)
+            seen = []
+            let cells = dfs(&path, result[start[0]][start[1]])
+            matrix[start[0]][start[1]].backgroundColor = .green
+            for node in cells {
+                let row = node.row
+                let col = node.col
+                matrix[row][col].backgroundColor = .green
+            }
+            matrix[target[0]][target[1]].backgroundColor = .blue
+            queue = []
+            seen = []
+            searchSpeed?.invalidate()
+            return
+        }
+        
+        matrix[currRow][currCol].backgroundColor = .yellow
+        
+        
+        for dir in dirs {
+            let newRow = currRow + dir[0]
+            let newCol = currCol + dir[1]
+            
+            if newRow < 0 || newRow >= matrix.count ||
+                newCol < 0 || newCol >= matrix[0].count ||
+                seen.contains("\(newRow)-\(newCol)") ||
+                matrix[newRow][newCol].backgroundColor == .gray {
+                continue
+            }
+            
+            seen.insert("\(newRow)-\(newCol)")
+            queue.append([newRow, newCol])
         }
     }
 }

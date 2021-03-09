@@ -82,6 +82,17 @@ class ViewController: UIViewController {
         return button
     }()
     
+    let dijkstraButton: UIButton = {
+        let screenSize = UIScreen.main.bounds
+        let frame = CGRect(x: screenSize.width/2 - 200, y: 650, width: 200, height: 50)
+        let button = UIButton(type: .system)
+        button.frame = frame
+        button.setTitle("Dijkstra's Search", for: .normal)
+        button.addTarget(self, action: #selector(dijkstraButtonPressed), for: .touchUpInside)
+
+        return button
+    }()
+    
     @objc func dfsButtonPressed(sender : UIButton) {
         graphSearchOptions.state = .dfs
     }
@@ -96,6 +107,10 @@ class ViewController: UIViewController {
     
     @objc func bidirectionalButtonPressed(sender : UIButton) {
         graphSearchOptions.state = .bidirectional
+    }
+    
+    @objc func dijkstraButtonPressed(sender : UIButton) {
+        graphSearchOptions.state = .dijkstra
     }
     
     @objc func stateButtonPressed(sender : UIButton) {
@@ -142,6 +157,7 @@ class ViewController: UIViewController {
         self.view.addSubview(dfsButton)
         self.view.addSubview(greedyButton)
         self.view.addSubview(bidirectionalButton)
+        self.view.addSubview(dijkstraButton)
         view.addSubview(collectionView)
         view.backgroundColor = .black
         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true

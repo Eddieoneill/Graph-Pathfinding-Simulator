@@ -16,6 +16,7 @@
 		6CBFB87625E6B04900639161 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFB87525E6B04900639161 /* CustomCell.swift */; };
 		6CBFB87925E6C82F00639161 /* CellState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFB87825E6C82F00639161 /* CellState.swift */; };
 		6CBFB87C25E6D32700639161 /* GraphSearchOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFB87B25E6D32700639161 /* GraphSearchOptions.swift */; };
+		6CDA506B25F6CDFB0095953E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDA506A25F6CDFB0095953E /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		6CBFB87525E6B04900639161 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		6CBFB87825E6C82F00639161 /* CellState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellState.swift; sourceTree = "<group>"; };
 		6CBFB87B25E6D32700639161 /* GraphSearchOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphSearchOptions.swift; sourceTree = "<group>"; };
+		6CDA506A25F6CDFB0095953E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				6CBFB87525E6B04900639161 /* CustomCell.swift */,
 				6CBFB87825E6C82F00639161 /* CellState.swift */,
 				6CBFB87B25E6D32700639161 /* GraphSearchOptions.swift */,
+				6CDA506A25F6CDFB0095953E /* Node.swift */,
 				6CBFB86125E6AD2E00639161 /* Main.storyboard */,
 				6CBFB86425E6AD2F00639161 /* Assets.xcassets */,
 				6CBFB86625E6AD2F00639161 /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 				6CBFB85C25E6AD2E00639161 /* AppDelegate.swift in Sources */,
 				6CBFB87625E6B04900639161 /* CustomCell.swift in Sources */,
 				6CBFB85E25E6AD2E00639161 /* SceneDelegate.swift in Sources */,
+				6CDA506B25F6CDFB0095953E /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
