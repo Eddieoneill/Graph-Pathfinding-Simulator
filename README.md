@@ -1,3 +1,3 @@
 # Graph-Simulator
 
-https://user-images.githubusercontent.com/42211866/110402683-d3d74300-8049-11eb-8af6-1ab8bb20789a.mp4
+![Dijkstra'sSimulation](https://user-images.githubusercontent.com/42211866/110403176-a63ec980-804a-11eb-8735-d5262d70cf2e.gif)
