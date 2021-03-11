@@ -1,4 +1,4 @@
-# Graph-Simulator
+# Graph-PathFinding-Simulator
 
 ## Description
 A simulation application that visually demonstrates how each of the following pathfinding algorithm works.
