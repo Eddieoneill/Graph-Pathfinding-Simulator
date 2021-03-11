@@ -1,7 +1,7 @@
 # Graph-PathFinding-Simulator
 
 ## Description
-A simulation application that visually demonstrates how each of the following pathfinding algorithm works.
+A simulation application that visually demonstrates how each of the following pathfinding algorithms works.
 ### BFS algorithm.
 ![Mar-08-2021 20-22-52](https://user-images.githubusercontent.com/42211866/110404025-1dc12880-804c-11eb-98b8-fe1fde85eed1.gif)
 
