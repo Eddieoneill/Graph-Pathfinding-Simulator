@@ -2,6 +2,7 @@
 
 ## Description
 iOS app for visualizing popular pathfinding algorithms.
+
 ### BFS
 ![Mar-08-2021 20-22-52](https://user-images.githubusercontent.com/42211866/110404025-1dc12880-804c-11eb-98b8-fe1fde85eed1.gif)
 
