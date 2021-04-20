@@ -1,6 +1,5 @@
 # Graph-PathFinding-Simulator
 
-
 ## Description
 iOS app for visualizing popular pathfinding algorithms.
 
